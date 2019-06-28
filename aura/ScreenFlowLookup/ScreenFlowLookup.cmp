@@ -1,0 +1,9 @@
+<aura:component implements="lightning:availableForFlowScreens">
+    <aura:attribute name="object" type="String"  />
+    <aura:attribute name="lookupField" type="String" />
+    <aura:attribute name="selectedRecordId" type="String" />
+
+    <lightning:recordEditForm objectApiName="{!v.object}">
+    	<lightning:inputField fieldName="{!v.lookupField}" onchange="{!c.handleChange}" value="{!v.selectedRecordId}" />
+    </lightning:recordEditForm>
+</aura:component>
